@@ -1,0 +1,55 @@
+/* components/homelist/homelist.wxss */
+
+.nnew {
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.new {
+  display: flex;
+  flex-direction: column;
+  padding: 0rpx 10rpx 0rpx 10rpx;
+  margin: 5rpx 0;
+  justify-items: center;
+  align-items: center;
+  border-right: 1rpx solid #f4f4f4;
+}
+
+.new-box {
+  display: flex;
+}
+
+.new image {
+  width: 280rpx;
+  height: 280rpx;
+}
+
+.new .new-title {
+  font-size: 30rpx;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 8rpx;
+}
+
+.new .new-t {
+  color: #8a8a8a;
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.new text {
+  color: #9c3232;
+  font-size: 24rpx;
+  display: inline-block;
+   width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 8rpx;
+  text-overflow: ellipsis;
+}

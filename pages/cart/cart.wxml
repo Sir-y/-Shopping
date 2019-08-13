@@ -1,0 +1,46 @@
+<!--pages/cart/cart.wxml-->
+<view class="cart">
+  <view class="cart-top">
+    <view class="cart-tbox">
+      <view class="cart-tdot"></view>
+      <text>30天无忧退货</text>
+    </view>
+    <view class="cart-tbox">
+      <view class="cart-tdot"></view>
+      <text>48小时快速退款</text>
+    </view>
+    <view class="cart-tbox">
+      <view class="cart-tdot"></view>
+      <text>满88元免邮费</text>
+    </view>
+  </view>
+  <view class="cart-center">
+    <view class="cart-cbox" wx:for="{{details}}" wx:key="id"  bindtouchstart='touchStart'  bindtouchend="touchEnd" animation="{{item.animationData}}"  data-dd="{{item.id}}">
+       <view class="cart-c">
+       <!-- <checkbox  class="cart-bdot" checked='{{item.checked}}'    bindtap='radiocon' data-dd="{{item.id}}"></checkbox> -->
+       <view class="{{ item.checked?'cart-bdot2':'cart-bdot1'}}" checked='{{item.checked}}'    bindtap='radiocon' data-dd="{{item.id}}"></view>
+      <image src="{{item.list_pic_url}}"></image>
+      <view class="cart-ctext">
+        <view>{{item.goods_name}}</view>
+        <view>￥{{item.retail_price}}</view>
+      </view>
+      <view class="cart-cright">x{{item.number}}</view>
+       </view>
+      <view class="cart-cshan" bindtap="deletes" data-shan="{{item.id}}">删除</view>
+    </view>
+  </view>
+  <view class="cart-b">
+    <view class="cart-bleft">
+      <!-- <view ></view> -->
+      <!-- <radio  class="cart-bdot" checked='{{check}}'  bindtap='radiocon'></radio> -->
+       <checkbox  class="cart-bdot" checked='{{check1}}'  bindtap='radiocon1'></checkbox>
+        <!-- <view class="{{ check1?'cart-bdot':'cart-bdot1'}}" checked='{{check1}}'  bindtap='radiocon1'></view> -->
+      <view class="cart-btext">全性({{mmc}})</view>
+    </view>
+    <view class="cart-bm">
+      <view class="cart-bmone">￥{{moey}}</view>
+      <view class="cart-bmo">下单</view>
+    </view>
+
+  </view>
+</view>

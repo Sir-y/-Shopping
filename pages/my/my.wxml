@@ -1,0 +1,17 @@
+<!--pages/my/my.wxml-->
+<view class="my">
+  <view class="my-top">
+    <image src="{{img}}"></image>
+    <view class="my-tt">
+      <view>{{name}}</view>
+      <view>微信用户</view>
+    </view>
+    <!-- <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">登录</button> -->
+  </view>
+  <view class="my-b">
+    <view wx:for="{{list}}" wx:key='id' class="my-bbox">
+      <label class="iconfont {{item.t_url}}"></label>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+</view>

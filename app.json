@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/special/special",
+    "pages/classification/classification",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/login/login",
+    "components/homelist/homelist",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "皇家商城",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/images/ic_menu_choice_nor.png",
+        "selectedIconPath": "pages/images/ic_menu_choice_pressed.png"
+      },
+      {
+        "pagePath": "pages/special/special",
+        "text": "专题",
+        "iconPath": "pages/images/ic_menu_topic_nor.png",
+        "selectedIconPath": "pages/images/ic_menu_topic_pressed.png"
+      },
+      {
+        "pagePath": "pages/classification/classification",
+        "text": "分类",
+        "iconPath": "pages/images/ic_menu_sort_nor.png",
+        "selectedIconPath": "pages/images/ic_menu_sort_pressed.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "pages/images/ic_menu_shoping_nor.png",
+        "selectedIconPath": "pages/images/ic_menu_shoping_pressed.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "pages/images/ic_menu_me_nor.png",
+        "selectedIconPath": "pages/images/ic_menu_me_pressed.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

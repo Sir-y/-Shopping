@@ -1,0 +1,134 @@
+<!--pages/detail/detail.wxml-->
+<view>
+
+
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" autoplay="true" interval="3000" indicator-dots="true" class="det">
+    <swiper-item wx:for="{{detail.gallery}}" wx:key='id'>
+      <image src="{{item.img_url}}" class="det-img" />
+    </swiper-item>
+  </swiper>
+
+
+  <view class="det-top">
+    <view class="det-tbox">
+      <view class="cart-tdot"></view>
+      <text>30天无忧退货</text>
+    </view>
+    <view class="det-tbox">
+      <view class="cart-tdot"></view>
+      <text>48小时快速退款</text>
+    </view>
+    <view class="det-tbox">
+      <view class="cart-tdot"></view>
+      <text>满88元免邮费</text>
+    </view>
+  </view>
+
+  <view class="det-cen">
+    <view class="det-ctext">{{detail.info.name}}</view>
+    <view class="det-ctext1">{{detail.info.goods_brief}}</view>
+    <view class="det-ctext2">￥{{detail.info.retail_price}}</view>
+  </view>
+
+  <view class="det-shu" bindtap="dnn">
+    <view class="det-shus">请选择规格数量
+    </view>
+    <label class="det-shut"></label>
+  </view>
+
+  <!-- 弹窗 -->
+  <view class="det-tan" wx:if="{{dss}}">
+    <view class="det-tant" bindtap="nss"></view>
+    <view class="det-tanb" animation="{{animationData}}">
+      <view class="det-btop">
+        <view class="det-btop1">
+          <image src="{{detail.info.primary_pic_url}}"></image>
+          <view class="det-btleft">
+            <text>价格 ￥{{detail.info.retail_price}}</text>
+            <text>请选择数量</text>
+          </view>
+        </view>
+        <view class="det-btop2" bindtap="nss">X </view>
+      </view>
+      <view class="det-bb">
+      <text>数量</text>
+      <view class="det-bbs">
+      <view bindtap="some">-</view>
+          <input value="{{inde}}" bindblur="blur"></input>
+          <view bindtap="big">+</view>
+      </view>
+      </view>
+
+    </view>
+
+  </view>
+
+
+  <!-- 商品参数 -->
+  <view class="det-can">
+    <view class="det-cc">商品参数</view>
+    <view wx:for="{{detail.attribute}}" wx:key="id" class="det-cbox">
+    <text>{{item.name}}</text>
+    <text>{{item.value}}</text>
+    </view> 
+  </view>
+
+  <!-- 图片 -->
+  <import src="../../wxParse/wxParse.wxml"/>
+
+
+  <view class="det-xtu">
+  <template is="wxParse" data="{{wxParseData:articles.nodes}}"/>
+  </view>
+
+<!-- 常见问题 -->
+  <view class="det-wen">
+  <view class="det-went">
+  <view class="det-went1"></view>
+  <text>常见问题</text>
+  <view class="det-went1"></view>
+  </view>
+<view class="det-wenb" >
+  <view wx:for="{{detail.issue}}" wx:key="id" class="det-call">
+  <view class="det-wenbt">
+  <view class="det-wenbtx"></view>
+  <text>{{item.question}}</text>
+  </view>
+  <view class="det-wenbxt">{{item.answer}}</view>
+  </view>
+</view>
+  </view>
+
+
+  <!-- 大家都在看 -->
+  <view class="look">
+  <view class="look-top">
+   <view class="det-went1"></view>
+  <text>大家都在看</text>
+  <view class="det-went1"></view>
+  </view>
+  <view class="look-b">
+  <view class="look-bbox" wx:for="{{detail.productList}}" wx:key="id">
+  <image src="{{item.list_pic_url}}"></image>
+  <text>{{item.name}}</text>
+  <text>￥{{item.retail_price}}</text>
+  </view>
+  </view>
+  </view>
+
+
+  <!-- 购物车 -->
+  <view class="showw">
+    <view class="showw-x">
+    <view></view>
+    </view>
+    <view class="showw-c">
+    <view>
+    <label>{{allnumber}}</label>
+    <image src="../images/ic_menu_shoping_nor.png"></image>
+    </view>
+    </view>
+    <view class="showw-mm" >立即购买</view>
+    <view class="showw-j" bindtap="showw">加入购物车</view>
+  </view>
+</view>

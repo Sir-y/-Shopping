@@ -1,0 +1,37 @@
+/* pages/special/special.wxss */
+
+.special {
+  background: #f4f4f4;
+}
+
+.special-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20rpx;
+  margin-bottom: 20rpx;
+  background: white;
+}
+
+.special-box image {
+  width: 100%;
+}
+
+.special-box text:nth-of-type(1) {
+  margin-top: 30rpx;
+  color: #333;
+  font-size: 35rpx;
+}
+
+.special-box text:nth-of-type(2) {
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+  padding: 0 20rpx;
+}
+
+.special-box text:nth-of-type(3) {
+  color: #b4282d;
+  font-size: 27rpx;
+  margin-top: 20rpx;
+}

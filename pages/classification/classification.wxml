@@ -1,0 +1,36 @@
+<!--pages/classification/classification.wxml-->
+<view class="classl">
+  <view class="classl-top">
+    <view class="classl-topp">
+      <image src="../images/search.png"></image>
+      <text>商品搜索,共239款好物</text>
+    </view>
+  </view>
+  <view class="classl-t">
+    <view class="classl-left">
+      <scroll-view scroll-y="true" class="sroll">
+        <view class="vi {{ item.id === Id ? 'vi' : 'vie'}}" wx:for="{{namw}}" wx:key="id" data-index="{{item.id}}" bindtap="my">{{item.name}}
+        </view>
+      </scroll-view>
+    </view>
+    <view class="classl-right">
+      <scroll-view scroll-y="true" class="sroll">
+        <view class="classl-right-box">
+          <view class="classl-right-top">
+            <image src="{{fication.banner_url}}"></image>
+          </view>
+          <view class="classl-right-center">
+            <text>{{fication.name}}分类</text>
+          </view>
+          <view class="classl-right-b">
+            <view class="classl-right-b1" wx:for="{{fication.subList}}" wx:key="id">
+              <image src="{{item.wap_banner_url}}"></image>
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </view>
+
+      </scroll-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<!--components/homelist/homelist.wxml-->
+<view class="nnew">
+  <scroll-view scroll-x="true">
+  <view class="new-box">
+  <view wx:for="{{mydate}}" wx:key="id" class="new" bindtap="navigate" data-i="{{item.id}}">
+      <image src="{{item.list_pic_url}}"></image>
+      <view class="new-title">{{item.name}}</view>
+      <view class="new-t">{{item.goods_brief}}</view>
+      <text>￥{{item.retail_price}}</text>
+    </view> 
+  </view>
+  </scroll-view>
+</view>

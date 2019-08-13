@@ -1,0 +1,97 @@
+<!--index.wxml-->
+<view class="xml">
+  <!-- 头部 -->
+  <view class="top">
+    <view class="top-left" bindtap="getLocation">
+      {{name}}
+    </view>
+    <view class="top-right">
+      <image src="../images/search.png"></image>
+      <input placeholder="搜素商品"></input>
+    </view>
+  </view>
+
+  <!-- 轮播图 -->
+  <view class="banner">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" autoplay="true" interval="3000" indicator-dots="true">
+      <block wx:for="{{mystat.banner}}" wx:key='id'>
+        <swiper-item>
+          <image src="{{item.image_url}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+
+  <!-- 图标 -->
+  <view class="icon">
+    <view wx:for="{{mystat.channel}}" wx:key="id" class="icon-home">
+      <image src="{{item.icon_url}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+
+  <!-- 品牌制造商 -->
+  <view class="manufacturer">
+    <view class="manufacturer-top">
+      品牌制造商直供
+    </view>
+    <view class="manufacturer-cen">
+      <view wx:for="{{mystat.brandList}}" wx:key="id" class="man">
+        <view class="man-title">
+          <view class="te">{{item.name}}</view>
+          <view class="te1">{{item.floor_price}}元起</view>
+        </view>
+        <image src="{{item.new_pic_url}}"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 更多 -->
+  <view class="episode">
+    <view class="episode-top">
+      <view class="episode-top1">
+        <text>新品首发</text>
+        <view>查看更多</view>
+      </view>
+    </view>
+    <homelist mydate="{{mystat.newGoods}}" />
+  </view>
+
+
+  <!-- 更多 -->
+  <view class="episode">
+    <view class="episode-top episode-to">
+      <view class="episode-top1">
+        <text>人气推荐 · 好物精选</text>
+        <view>查看更多</view>
+      </view>
+    </view>
+    <homelist mydate="{{mystat.hotGoods}}" />
+  </view>
+
+  <!-- 专题精选 -->
+  <view class="special">
+    <view class="manufacturer-top">
+      <text>专题精选</text>
+      <label class="label"></label>
+    </view>
+    <scroll-view scroll-x="true">
+      <view class="special-new">
+        <view wx:for="{{mystat.topicList}}" wx:key="id" class="special-n">
+          <image src="{{item.item_pic_url}}"></image>
+          <view class="special-t">
+            <view class="special-t1">
+              <view class="special-t2">{{item.title}}</view>
+              <view class="special-t3">{{item.subtitle}}</view>
+            </view>
+            <view class="special-t4">{{item.price_info}}元起</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 居家好物 -->
+  <homecom wx:for="{{mystat.newCategoryList}}" myst="{{item}}"      wx:key="id"/>
+</view>

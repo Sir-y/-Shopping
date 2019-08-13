@@ -1,0 +1,129 @@
+/* pages/classification/classification.wxss */
+page{
+  height: 100%;
+overflow: hidden;
+
+}
+.classl{
+  height: 100%
+}
+.classl-top {
+  height: 88rpx;
+  padding: 0 30rpx;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid #ededed;
+}
+
+.classl-topp {
+  width: 100%;
+  height: 56rpx;
+  background: #ededed;
+  border-radius: 8rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.classl-topp image {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 8rpx;
+}
+
+.classl-topp text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.classl-t {
+  display: flex;
+  height: calc(100% - 88rpx);
+  overflow: hidden;
+}
+
+.classl-left {
+  width: 20%;
+}
+.classl-left .sroll{
+ height: calc(100% - 88rpx)
+}
+
+.classl-left .vi {
+  width: 100%;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #ab2b2b;
+font-size: 36rpx;
+border-left: 6rpx solid #ab2b2b;
+}
+.classl-left .vie{
+  color: #333;
+  font-size: 28rpx;
+  border-left: 6rpx solid #fff;
+}
+.classl-right {
+  flex: 1;
+  padding: 0 30rpx 0 30rpx;
+}
+.classl-right .sroll{
+ height: calc(100% - 88rpx)
+}
+.classl-right-top {
+  width: 100%;
+  height: 222rpx;
+  margin-top: 20rpx;
+}
+
+.classl-right-top image {
+  width: 100%;
+  height: 100%;
+}
+
+.classl-right-center {
+  padding: 50rpx 0;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.classl-right-center text::after {
+  content: '';
+  display: inline-block;
+  width: 45rpx;
+  height: 2rpx;
+  background: #000;
+  margin-bottom: 10rpx;
+  margin-left: 15rpx;
+}
+
+.classl-right-center  text::before {
+  content: '';
+  display: inline-block;
+  width: 45rpx;
+  height: 2rpx;
+  background: #000;
+  margin-bottom: 10rpx;
+  margin-right: 15rpx;
+}
+
+.classl-right-b {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.classl-right-b1 {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.classl-right-b1 image {
+  height: 144rpx;
+  width: 144rpx;
+}

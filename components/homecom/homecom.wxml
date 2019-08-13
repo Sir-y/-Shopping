@@ -1,0 +1,19 @@
+<!--components/homecom/homecom.wxml-->
+<view class="good">
+  <view class="goodi">
+    <view class="good-top">{{myst.name}}好物</view>
+    <view class="good-b">
+      <view wx:for="{{myst.goodsList}}" wx:key="id" class="goof">
+        <view class="good-box">
+          <image src="{{item.list_pic_url}}"></image>
+          <text class="good-title">{{item.name}}</text>
+          <text class="good-t">￥{{item.retail_price}}</text>
+        </view>
+      </view>
+      <view class="goof goodt">
+          <text>{{myst.name}}好物</text>
+          <label></label>
+      </view>
+    </view>
+  </view>
+</view>

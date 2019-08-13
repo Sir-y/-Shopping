@@ -1,0 +1,9 @@
+<!--pages/special/special.wxml-->
+<view class="special">
+  <view wx:for="{{allDate}}" wx:key="id" class="special-box">
+    <image src="{{item.scene_pic_url}}"></image>
+    <text>{{item.title}}</text>
+    <text>{{item.subtitle}}</text>
+    <text>{{item.price_info}}元起</text>
+  </view>
+</view>

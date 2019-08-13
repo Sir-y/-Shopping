@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "homelist":"../../components/homelist/homelist",
+    "homecom":"../../components/homecom/homecom"
+  }
+}
